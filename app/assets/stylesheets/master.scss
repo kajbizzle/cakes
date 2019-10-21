@@ -1,0 +1,48 @@
+@import "bootstrap";
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Loved+by+the+King&display=swap');
+
+body {
+  background: image_url('fishnets-and-hearts.png') center center fixed;
+  font-family: 'Loved by the King', cursive;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: white;
+  font-size: 35px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+#flex-content-container {
+  flex: 1;
+}
+
+.hero {
+  background: image_url('cake.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: auto;
+  height: 300px;
+}
+
+.cake-img {
+max-height: 450px;
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}

@@ -12,7 +12,19 @@
         <br />
         <h2>I'm just a cake lover on a journey to find the best cake across the country.</h2>
         <br /><br />
+        <div class="row feature text-center">
+          <div class="col-5 col-sm">
+            <h3><%= link_to 'View Cake Diary', cakes_path %></h3>
+            <h3><%= link_to 'Contribute to Cake Diary', new_cake_path %></h3>
+          </div>
+        </div>  
       </div>
+    </div>
+    <br />
+    <div>
+       <h3><%= @cake.name %></h3>
+       <h3><%= @cake.restaurant %></h3>
+       <h3><%= @cake.comments %></h3>
     </div>
     <br />
     <div class="row feature text-center">

@@ -1,57 +1,21 @@
-<html>
-  <head>
-    <title>Cake</title>
-  </head>
+<div class="frosty col-10 offset-1 text-center">
+        <br />
+          <h1>Welcome to the show page</h1>
+          <div>
+            <% @cake.each do |cake| %>
+              <div>
+                <h3><%= cake.name %></h3><br />
+                <i><%= cake.restaurant %></i><br />
+                <p><%= cake.comments %></p><br />
+              </div>
+            <% end %>
+          </div>
+          <br />
+</div>
 
-  <body>
-    <div class="hero">
-      <br />
-      <div class="frosty col-10 offset-1 text-center">
-        <br />
-        <h1>Why do I love cake so much?</h1>
-        <br />
-        <h2>I'm just a cake lover on a journey to find the best cake across the country.</h2>
-        <br /><br />
+       <br /><br />
         <div class="row feature text-center">
           <div class="col-5 col-sm">
-            <h3><%= link_to 'View Cake Diary', cakes_path %></h3>
-            <h3><%= link_to 'Contribute to Cake Diary', new_cake_path %></h3>
+            <h3><%= link_to 'Add a Cake', new_cake_path %></h3>
           </div>
         </div>  
-      </div>
-    </div>
-    <br />
-    <div>
-       <h3><%= @cake.name %></h3>
-       <h3><%= @cake.restaurant %></h3>
-       <h3><%= @cake.comments %></h3>
-    </div>
-    <br />
-    <div class="row feature text-center">
-      <div class="col-12 col-sm">
-        <h3>My Favorite Cake</h3>
-        <br />
-        <p>Hands down it has to be German Chocolate Cake.</p>
-        <br />
-        <%= image_tag 'gcc.jpg', class: 'cake-img' %>
-      </div>
-
-      <div class="col-12 col-sm">
-        <h3>My Favorite Place to Eat Cake</h3>
-        <br />
-        <p>The Cheesecake Factory. After German Chocolate Cake, my second favorite is Cheesecake. They have so many different dessesrts that it's difficult to choose. I like to order their Pineapple Upside Down Cheesecake.</p>
-        <%= link_to "The Cheesecake Factory", "http://www.thecheesecakefactory.com", :target => "_blank" %>
-        <br />
-        <%= image_tag 'puc_cake.jpg', class: 'cake-img' %>
-      </div>
-
-      <div class="col-12 col-sm">
-        <h3>Favorite Cake to Make</h3>
-        <br />
-        <p>Hummingbird cake is a banana-pineapple spice cake common in the Southern United States.</p>
-        <br />
-        <%= image_tag 'hb_cake.jpg', class: 'cake-img' %>
-      </div>
-    </div>
-  </body>
-</html>

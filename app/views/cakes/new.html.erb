@@ -1,8 +1,10 @@
-<h1>Enter Your Cake Details</h1>
-<%= simple_form_for @cake do |f| %>
-  <%= f.input :name %>
-  <%= f.input :restaurant %>
-  <%= f.input :comments %>
-  <br />
-  <%= f.submit 'Create', class: 'btn btn-danger' %>
-<% end %>
+<div class="booyah-box col-10 offset-1">
+  <h1>Enter Your Cake Details</h1>
+  <%= simple_form_for @cake do |f| %>
+    <%= f.input :name %>
+    <%= f.input :restaurant %>
+    <%= f.input :comments %>
+    <br />
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+  <% end %>
+</div>

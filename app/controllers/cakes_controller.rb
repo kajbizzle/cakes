@@ -1,6 +1,6 @@
 class CakesController < ApplicationController
   def index
-    @cake = Cake.order("Random()").first
+    @cake = Cake.all
   end
 
   def new
@@ -8,13 +8,13 @@ class CakesController < ApplicationController
   end
 
   def create
-    Cake.create(cake_params)
+    @cake = Cake.create(params[:cake_params])
+    redirect_to root_path
   end
 
   private
 
   def cake_params
     params.require(:cake).permit(:name, :restaurant, :comments)
-    redirect_to root_path
   end
 end

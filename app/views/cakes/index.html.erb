@@ -1,31 +1,28 @@
-<div class="frosty col-10 offset-1 text-center">
-        <br />
-          <h1>Welcome to the show page</h1>
-          <br />
+<html>
+  <div class="hero">
+    <br />
+    <div class="frosty col-10 offset-1 text-center">
+      <br />
+      <h1>Cakes That I Love and Where to Get Them</h1>
+      <br /><br />
+      <div class="row feature text-center">
+        <div class="col-5 col-sm">
           <h3><%= link_to 'Home', root_path %></h3>
-          <br />
-          <div>
-            <% @cake.each do |cake| %>
-              <div>
-                <h3><%= cake.name %></h3><br />
-                <i><%= cake.restaurant %></i><br />
-                <p><%= cake.comments %></p><br />
-              </div>
-            <% end %>
-          </div>
-          <br />
-</div>
-
-       <br />
-       <p>
-       <p>
-       <p>
-       <p>
-       <p>
-       <p>
-       <p>
-        <div class="row feature text-center">
-          <div class="col-5 col-sm">
-            <h3><%= link_to 'Add a Cake', new_cake_path %></h3>
-          </div>
-        </div>  
+          <h3><%= link_to 'Add a Cake', new_cake_path %></h3>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <br />
+  <div class="row feature text-center">
+    <div class="col-12 col-sm">
+      <% @cake.each do |cake| %>
+        <div>
+          <h3><%= cake.name %></h3><br />
+          <i><%= cake.restaurant %></i><br />
+          <p><%= cake.comments %></p><br />
+        </div>
+      <% end %>
+    </div>
+  </div>
+</html>

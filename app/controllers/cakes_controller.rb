@@ -8,8 +8,12 @@ class CakesController < ApplicationController
   end
 
   def create
-    @cake = Cake.create(params[:cake_params])
-    redirect_to root_path
+    @cake = Cake.new(cake_params)
+    @cake.save
+    redirect_to cakes_path(@cake)
+  end
+
+  def show
   end
 
   private
